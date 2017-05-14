@@ -1,7 +1,11 @@
-const http = require('http');
+const express = require('express');
+const app = express();
 
-var server = http.createServer((req, res) => {
-  res.writeHead(200);
-  res.end('Hello Http');
+app.get('/', function(req, res){
+  res.send('Hello World');
 });
-server.listen(8080);
+
+const port = 3000;
+app.listen(port, () => {
+    console.log(`running at http://localhost:${port}`);
+});
