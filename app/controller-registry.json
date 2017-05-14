@@ -1,5 +1,5 @@
 {
     "controllers": [
-        "./index/index"
+        "./index"
     ]
 }

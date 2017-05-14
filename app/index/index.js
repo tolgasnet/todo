@@ -1,3 +1,3 @@
 module.exports = {
-    route: ['/', './index/index.html']
+    routeOptions: { path: '/', file: 'index.html' }
 };

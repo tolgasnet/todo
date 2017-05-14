@@ -1,10 +1,15 @@
 const serverAdapter = require('./server-adapter');
-const controllerRegistry = require('./controller-registry.json'); 
+const controllerRegistry = require('./controller-registry.json');
 
-(function addRoutes() {
+(function addControllers() {
     for (let controllerPath of controllerRegistry.controllers) {
         const controller = require(controllerPath);
-        serverAdapter.route(...controller.route);
+        const routeOptions = controller.routeOptions;
+        serverAdapter.route(
+            routeOptions.path, 
+            `${controllerPath}/${routeOptions.file}`);
+        
+        serverAdapter.serveStatic(controllerPath);
     }
 })();
 
