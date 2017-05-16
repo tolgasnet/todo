@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.15.2",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "webpack": "^2.5.1"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
@@ -14,12 +12,10 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-node": "^4.2.2",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "nodemon": "^1.11.0"
+    "eslint-plugin-standard": "^3.0.1"
   },
   "scripts": {
-    "start": "./node_modules/.bin/nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "webpack",
     "lint": "./node_modules/.bin/eslint ./app/**/*.js"
   },
   "repository": {
