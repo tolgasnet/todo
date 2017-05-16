@@ -15,7 +15,7 @@
     "eslint-plugin-standard": "^3.0.1"
   },
   "scripts": {
-    "bundle": "webpack",
+    "bundle": "webpack --progress --colors --watch",
     "lint": "./node_modules/.bin/eslint ./app/**/*.js"
   },
   "repository": {
