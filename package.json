@@ -16,7 +16,8 @@
   },
   "scripts": {
     "bundle": "webpack --progress --colors --watch",
-    "lint": "./node_modules/.bin/eslint ./app/**/*.js"
+    "lint": "./node_modules/.bin/eslint ./app/**/*.js",
+    "build": "npm run lint & npm run bundle"
   },
   "repository": {
     "type": "git",
