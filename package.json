@@ -4,20 +4,29 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "webpack": "^2.5.1"
   },
   "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-react": "^6.24.1",
     "eslint": "^3.19.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-node": "^4.2.2",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint-plugin-standard": "^3.0.1",
+    "webpack-dev-server": "^2.4.5"
   },
   "scripts": {
-    "bundle": "webpack --progress --colors --watch",
-    "lint": "./node_modules/.bin/eslint ./app/**/*.js",
-    "build": "npm run lint & npm run bundle"
+    "build-assets": "webpack --progress --colors --watch",
+    "asset-server": "webpack-dev-server --progress --colors --content-base app/",
+    "lint": "./node_modules/.bin/eslint ./app/**/*.js --ignore-pattern bundle.js",
+    "build": "npm run lint & npm run build-assets",
+    "start": "npm run lint & npm run asset-server"
   },
   "repository": {
     "type": "git",

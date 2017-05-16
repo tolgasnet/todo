@@ -1,15 +1,17 @@
 {
     "env": {
         "browser": true,
-        "commonjs": true,
+        "commonjs": false,
         "es6": true,
-        "node": true
+        "node": false
     },
     "extends": "eslint:recommended",
     "parserOptions": {
+        "ecmaVersion": 6,
         "sourceType": "module",
         "ecmaFeatures": {
-            "jsx": true
+            "jsx": true,
+            "impliedStrict": true
         }
     },
     "rules": {
